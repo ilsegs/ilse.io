@@ -1,0 +1,36 @@
+:root {
+  --bg: #151515;
+  --bg-contact: #242424;
+  --accent: #af00a7;
+  --graytext: #d9d9d9;
+  --whitetext: #ffffff;
+  --invalid: #ff6f5b;
+  --fontsize-18: 1.125rem;
+  --fontsize-88: 5.5rem;
+  --fontsize-48: 3rem;
+  --fontsize-24: 1.5rem;
+  --fontsize-72: 4.5rem;
+  --fontsize-40: 2.5rem;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*,
+*::before,
+::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: "Anta", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 1.56;
+  background-color: var(--bg);
+  color: var(--graytext);
+}
