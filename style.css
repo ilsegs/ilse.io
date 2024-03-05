@@ -47,8 +47,44 @@ p {
   margin-top: 0px;
 }
 
+h1 {
+  font-size: 2.5rem;
+  font-size: clamp(2.5rem, 0.7rem + 7.7vw, 5.5rem);
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1;
+}
+
+p {
+  line-height: 1.5;
+}
+
 a {
   transition: color var(--transition);
+}
+
+a.underline,
+button {
+  display: inline-block;
+  padding-bottom: 0.625rem;
+  font-size: 1rem;
+  line-height: 1.625;
+  letter-spacing: 2.29px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--graytext);
+  text-decoration: none;
+  background-image: linear-gradient(
+    to right,
+    var(--accent) 75%,
+    var(--accent) 75%
+  );
+  background-position: 0 2.1em;
+  background-repeat: repeat-x;
+  background-size: 8px 2px;
 }
 
 a:hover {
@@ -76,6 +112,11 @@ a:hover {
   .wrapper {
     width: calc(100% - 3.75rem);
   }
+}
+
+/* UTILITY*/
+.bottom-border {
+  border-bottom: 1px solid var(--whitetext);
 }
 
 /* HEADER */
@@ -117,7 +158,7 @@ a:hover {
   fill: var(--accent);
 }
 
-/*change flex for tablet*/
+/*Header - change flex for tablet*/
 @media (min-width: 37.5rem) {
   .header {
     margin-block-start: 30px;
@@ -133,7 +174,7 @@ a:hover {
     margin-inline-end: auto;
     margin-left: 32px;
   }
-
+  /*Header - change flex for desktop*/
   @media (min-width: 62.5em) {
     .header {
       margin-block-start: 40px;
@@ -146,9 +187,8 @@ a:hover {
   }
 }
 
-/* PROFILE PIC */
-.profilepic {
-}
+/* PROFILE PIC mobile*/
+
 .ilse_wrapper {
   padding-bottom: 80px;
 }
@@ -164,6 +204,8 @@ a:hover {
 
 .ilse_text {
   text-align: center;
+  position: relative;
+  margin-top: 225px; /*change this if image gets taller*/
 }
 
 .ilse_headline {
@@ -185,10 +227,6 @@ h1 > span {
   background-size: 8px 4px;
 }
 
-.ilse_description {
-  margin-block-end: 24px;
-}
-
 .rings {
   position: absolute;
   right: 50%;
@@ -203,6 +241,15 @@ h1 > span {
   margin-bottom: -129px;
   translate: calc(100vw - 64px - 16px);
 }
+
+.ilse_description {
+  margin-block-end: 24px;
+}
+
+.ilse_contact {
+}
+
+/*PROFILE PIC tablet size*/
 
 @media (min-width: 37.5em) {
   .profilepic {
@@ -273,6 +320,8 @@ h1 > span {
   }
 }
 
+/*PROFILE PIC desktop*/
+
 @media (min-width: 62.5em) {
   .profilepic {
     margin-block-start: 0px;
@@ -324,3 +373,77 @@ h1 > span {
     margin-block-end: 66px;
   }
 }
+
+/*SKILLS mobile */
+
+.skills {
+  position: relative;
+}
+
+.skills_wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  padding-block: 40px;
+}
+
+.skills_item {
+  text-align: center;
+}
+.skills_title {
+  font-style: var(--whitetext);
+  line-height: 1.17; /*line height = line px divided by char size px*/
+  font-size: 2rem;
+  font-size: clamp(2rem, 0.34rem + 7.1vw, 3rem);
+  margin-block-end: 2px;
+}
+
+.skills_experience {
+  font-style: var(--graytext);
+  font-size: 16px;
+  line-height: 1.625;
+  margin-block-end: 0;
+}
+
+.skills_rings {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  translate: 0 50%;
+}
+
+/*SKILLS tablet */
+
+@media (min-width: 37.5em) {
+  .skills_wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 52px 24px;
+    border: none;
+    padding-block: 52px 0;
+  }
+
+  .skills_item {
+    text-align: left;
+  }
+
+  .skills_rings {
+    translate: 40% 50%;
+  }
+}
+
+/* SKILLS desktop */
+
+@media (min-width: 62.5em) {
+  .skills_wrapper {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 58px 30px;
+    padding-block-start: 72px;
+  }
+
+  .skills_rings {
+    translate: -40% 50%;
+    left: 100%;
+  }
+}
+
+/* PROJECTS */

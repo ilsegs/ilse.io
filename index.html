@@ -18,10 +18,11 @@
     />
     <link rel="stylesheet" href="style.css" />
 
-    <title>Frontend Mentor | Single-page developer portfolio</title>
+    <title>Ilse.io | Developer portfolio</title>
   </head>
   <body>
     <header class="header">
+      <h2 class="visually-hidden">Header</h2>
       <div class="wrapper">
       <nav class="header__nav">
         <a href="/" class="header__home"
@@ -84,7 +85,7 @@
       <section class="profilepic">
   <div class="wrapper ilse_wrapper bottom-border">
         <div class="ilse_content">
-          <picture class="ilse_image">
+          <picture>
             <source
               media="(min-width: 62.5em)"
               srcset="assets/images/ilse.desktop6.webp"
@@ -94,7 +95,7 @@
               srcset="assets/images/ilse.tablet6.webp"
             />
         <img
-        
+        class="ilse_image"
         src="assets/images/ilse.mobile6.webp"
         alt="Ilse"
         width="174"
@@ -116,25 +117,56 @@
               height="129"
             />
         <div class="ilse_text"><h1 class="ilse_headline header">Nice to <br />
-          meet you! I'm <span>Ilse</span>.</h1> </div> 
+          meet you! I'm <span>Ilse</span>.</h1>
+        <p class="ilse_description">
+          Based in Norway, I'm a full stack developer passionate about building accessible web apps and games that users love.
+        </p>
+        <a href="" class="ilse_contact underline">Contact me</a>
+        </div> 
       </div>
     </div>
   </div>
     </section>
+
+    <section class="skills">
+    <h2 class="visually-hidden">Skills</h2>
+    <div class="wrapper skills_wrapper bottom-border">
+      <div class="skills_item">
+        <h3 class="skills_title">HTML</h3>
+        <p class="skills_experience">4 Years Experience</p>
+      </div>
+      <div class="skills_item">
+        <h3 class="skills_title">CSS</h3>
+        <p class="skills_experience">4 Years Experience</p>
+      </div>
+      <div class="skills_item">
+        <h3 class="skills_title">JavaScript</h3>
+        <p class="skills_experience">4 Years Experience</p>
+      </div>
+      <div class="skills_item">
+        <h3 class="skills_title">Python</h3>
+        <p class="skills_experience">4 Years Experience</p>
+      </div>
+      <div class="skills_item">
+        <h3 class="skills_title">Appfarm</h3>
+        <p class="skills_experience">2 Years Experience</p>
+      </div>
+      <div class="skills_item">
+        <h3 class="skills_title">C++</h3>
+        <p class="skills_experience">1 Year Experience</p>
+      </div>
+
+    </div>
+    <img
+    class="skills_rings"
+    src="assets/images/pattern-rings.svg"
+    alt=""
+    width="530"
+    height="129"
+  />
+  </section>
     </main>
     <footer class="footer"></footer>
 
-    <!--Based in Norway, I'm a full stack developer passionate about building
-    accessible web apps and games that users love. Contact me HTML 4 Years
-    Experience CSS 4 Years Experience JavaScript 4 Years Experience
-    Accessibility 4 Years Experience React 3 Years Experience Sass 3 Years
-    Experience Projects Contact me Design portfolio HTML CSS View project View
-    code E-learning landing page HTML CSS View project View code Todo web app
-    HTML CSS JavaScript View project View code Entertainment web app HTML CSS
-    JavaScript View project View code Memory Game HTML CSS JavaScript View
-    project View code Art gallery showcase HTML CSS JavaScript View project View
-    code Contact I would love to hear about your project and how I could help.
-    Please fill in the form, and I’ll get back to you as soon as possible. Name
-    Email Message Send message adamkeyes-->
   </body>
 </html>
