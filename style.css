@@ -75,6 +75,18 @@ a {
   transition: color var(--transition);
 }
 
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px dashed var(--accent);
+  outline-offset: 2px;
+}
+
+input:invalid,
+textarea:invalid {
+  outline-color: var(--invalid);
+}
+
 a.underline,
 button {
   display: inline-block;
@@ -658,7 +670,7 @@ h1 > span {
   border: none;
   border-bottom: 1px solid var(--graytext);
   background: transparent;
-  font-size: 1rem;
+  font-size: var(--fontsize-24);
   line-height: 1.625;
   color: var(--graytext);
 }
@@ -678,7 +690,7 @@ h1 > span {
   justify-content: flex-end;
 }
 
-.contact_invalid {
+.contact_invalid-icon {
   display: none;
   width: var(--fontsize-24);
   height: var(--fontsize-24);
@@ -693,16 +705,17 @@ h1 > span {
   border: none;
 }
 
-.contact input:focus-visible:invalid ~ .contact_invalid,
-.contact textarea:focus-visible:invalid ~ .contact_invalid {
+/*
+.contact input:focus-visible:invalid ~ .contact_invalid-icon,
+.contact textarea:focus-visible:invalid ~ .contact_invalid-icon {
   display: inline-block;
 }
 
-.contact textarea:focus-visible:invalid ~ .contact_invalid {
+.contact textarea:focus-visible:invalid ~ .contact_invalid-icon {
   top: 1.2rem;
   right: 1.5rem;
   translate: none;
-}
+}*/
 
 .contact_rings {
   position: absolute;
@@ -714,7 +727,7 @@ h1 > span {
 
 /* CONTACT - tablet*/
 @media (min-width: 37.5em) {
-  .contact__rings {
+  .contact_rings {
     bottom: 47px;
     translate: -75%;
   }
@@ -749,3 +762,19 @@ h1 > span {
 }
 
 /* FOOTER*/
+
+footer {
+  padding-block: 40px 60px;
+}
+
+@media (min-width: 37.5em) {
+  footer {
+    padding-block: 30px 40px;
+  }
+}
+
+@media (min-width: 62.5em) {
+  footer {
+    padding-block: 47px 92px;
+  }
+}
