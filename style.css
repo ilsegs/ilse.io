@@ -18,6 +18,11 @@
   --transition: 250ms ease-in-out;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 html {
   box-sizing: border-box;
   font-size: 100%;
@@ -40,6 +45,10 @@ body {
   color: var(--graytext);
 }
 
+.bg-contact {
+  background-color: var(--bg-contact);
+}
+
 h1,
 h2,
 h3,
@@ -47,10 +56,10 @@ p {
   margin-top: 0px;
 }
 
-h1 {
+.header-xl {
   font-size: 2.5rem;
   font-size: clamp(2.5rem, 0.7rem + 7.7vw, 5.5rem);
-}
+} /* calculated with Fluid Typography calculator: https://royalfig.github.io/fluid-typography-calculator/ */
 
 h1,
 h2,
@@ -189,6 +198,9 @@ a:hover {
 
 /* PROFILE PIC mobile*/
 
+.profilepic {
+}
+
 .ilse_wrapper {
   padding-bottom: 80px;
 }
@@ -240,6 +252,7 @@ h1 > span {
   top: 171px;
   margin-bottom: -129px;
   translate: calc(100vw - 64px - 16px);
+  z-index: -1;
 }
 
 .ilse_description {
@@ -409,7 +422,8 @@ h1 > span {
   position: absolute;
   bottom: 0;
   left: 50%;
-  translate: 0 50%;
+  z-index: -1;
+  translate: (0 50%);
 }
 
 /*SKILLS tablet */
@@ -446,4 +460,292 @@ h1 > span {
   }
 }
 
-/* PROJECTS */
+/* PROJECTS - mobile first */
+
+.projects_wrapper {
+  padding-block: 80px;
+}
+
+.projects_grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  justify-items: center;
+  text-align: center;
+}
+.projects_headline {
+  margin-block-end: 0;
+}
+
+.projects_headline,
+.projects_contact {
+  grid-column: span 1;
+}
+
+.projects_contact {
+  align-self: center;
+}
+
+.projects_items {
+  grid-column: 1 / span 2;
+}
+
+.projects_picture {
+  display: block;
+}
+
+.projects_image {
+  width: 100%;
+  height: auto;
+}
+
+.projects_title {
+  font-size: 1.5rem;
+  line-height: 1.3;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-block-end: 7px;
+}
+
+.projects_skills {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-block-end: 20px;
+  text-transform: uppercase;
+}
+
+.projects_links {
+  display: block;
+  align-items: center;
+  gap: 20px;
+}
+.projects_links a {
+  margin-inline-end: 30px;
+}
+
+/* PROJECTS - tablet */
+@media (min-width: 37.5em) {
+  .projects_grid {
+    gap: 60px 24px;
+    justify-items: start;
+    text-align: left;
+  }
+
+  .projects_contact {
+    justify-self: end;
+    align-self: center;
+  }
+
+  .projects_items {
+    grid-column: span 1;
+  }
+
+  .projects_skills,
+  .projects_links {
+    display: block;
+  }
+
+  .projects_skills span {
+    margin-inline-end: 18px;
+  }
+
+  .projects_links span {
+    margin-inline-end: 30px;
+  }
+}
+
+/* PROJECTS - desktop */
+@media (min-width: 85.5em) {
+  .projects_grid {
+    gap: 70px 30px;
+  }
+
+  .projects_items {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+  }
+
+  .projects_picture {
+    position: relative;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    margin-block-end: 20px;
+  }
+
+  .projects_picture::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0;
+    transform: scaleX(1);
+    transform-origin: 100%;
+    transition: opacity 150ms ease-in-out;
+  }
+
+  @media (hover: hover) {
+    .projects_items:hover .projects_picture::after {
+      opacity: 0.5;
+    }
+
+    .projects_items:hover .projects_links {
+      opacity: 1;
+    }
+
+    .projects_items:focus-within .projects_links {
+      opacity: 1;
+    }
+
+    .projects_items:focus-within .projects_picture::after {
+      opacity: 0.5;
+    }
+  }
+
+  .projects_image {
+    width: 100%;
+    height: auto;
+  }
+
+  .projects_links {
+    grid-row: 1;
+    grid-column: 1 / 2;
+    align-self: center;
+    justify-self: center;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 400ms ease-in-out;
+  }
+
+  .projects_links:hover ~ .projects_picture::after {
+    opacity: 0.5;
+  }
+
+  .projects_skills {
+    margin-block-end: 0;
+  }
+}
+
+/* CONTACT - mobile*/
+
+.contact {
+  position: relative;
+}
+
+.contact_wrapper {
+  padding-block: 84px;
+}
+
+.contact_title {
+  margin-block-end: var(--fontsize-24);
+}
+
+.contact_form {
+  position: relative;
+  margin-block-end: 16px;
+}
+
+.contact_form input,
+.contact_form textarea {
+  width: 100%;
+  padding-block: 16px;
+  padding-inline: 24px;
+  border: none;
+  border-bottom: 1px solid var(--graytext);
+  background: transparent;
+  font-size: 1rem;
+  line-height: 1.625;
+  color: var(--graytext);
+}
+
+.contact_input > *::placeholder {
+  color: var(--graytext);
+  opacity: 0.5;
+  text-transform: uppercase;
+}
+
+.contact_form textarea {
+  margin-block-end: 32px;
+}
+
+.contact_form.align-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.contact_invalid {
+  display: none;
+  width: var(--fontsize-24);
+  height: var(--fontsize-24);
+  position: absolute;
+  top: 50%;
+  right: 0;
+  translate: -50% -50%;
+}
+
+.contact_form button {
+  background-color: transparent;
+  border: none;
+}
+
+.contact input:focus-visible:invalid ~ .contact_invalid,
+.contact textarea:focus-visible:invalid ~ .contact_invalid {
+  display: inline-block;
+}
+
+.contact textarea:focus-visible:invalid ~ .contact_invalid {
+  top: 1.2rem;
+  right: 1.5rem;
+  translate: none;
+}
+
+.contact_rings {
+  position: absolute;
+  left: 0;
+  bottom: 97px;
+  height: auto;
+  translate: -75%;
+}
+
+/* CONTACT - tablet*/
+@media (min-width: 37.5em) {
+  .contact__rings {
+    bottom: 47px;
+    translate: -75%;
+  }
+}
+
+/* CONTACT - desktop*/
+@media (min-width: 62.5em) {
+  .contact_wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 27.8rem);
+    justify-content: space-between;
+  }
+
+  .contact_title {
+    margin-block-end: var(--fs-36);
+  }
+
+  .contact_rings {
+    translate: -40%;
+  }
+}
+
+/* 999.98px */
+@media (max-width: 62.49875em) {
+  .contact_wrapper {
+    max-width: 27.8rem;
+  }
+
+  .contact_description {
+    text-align: center;
+  }
+}
+
+/* FOOTER*/
