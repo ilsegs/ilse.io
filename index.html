@@ -3,8 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta name="author" content="Ilse GS" />
+    
+    <link 
+    rel="preconnect" 
+    href="https://fonts.googleapis.com" />
+    <link 
+    rel="preconnect" 
+    href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Anta&display=swap"
       rel="stylesheet"
@@ -17,6 +23,7 @@
       href="./assets/images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
 
     <title>Ilse.io | Developer portfolio</title>
   </head>
@@ -24,12 +31,12 @@
     <header class="header">
       <h2 class="visually-hidden">Header</h2>
       <div class="wrapper">
-      <nav class="header__nav">
-        <a href="/" class="header__home"
+      <nav class="header_nav">
+        <a href="/" class="header_home"
           >ilse.io
           <span class="visually-hidden">(to home page)</span>
         </a>
-        <a href="" class="header__social"
+        <a href="" class="header_social"
           ><svg
             role="img"
             aria-label="Github"
@@ -45,7 +52,7 @@
             />
           </svg>
         </a>
-        <a href="" class="header__social">
+        <a href="" class="header_social">
           <svg
             role="img"
             aria-label="FrontendMentor"
@@ -61,7 +68,7 @@
           </svg>
         </a>
 
-        <a href="" class="header__social">
+        <a href="" class="header_social">
           <svg
             role="img"
             aria-label="Linkedin"
@@ -81,10 +88,11 @@
       </div>
     </header>
 
+<!-- PROFILE SECTION -->
     <main id="main">
-      <section class="profilepic">
-  <div class="wrapper ilse_wrapper bottom-border">
-        <div class="ilse_content">
+      <section class="profile">
+  <div class="wrapper profile_wrapper bottom-border">
+        <div class="profile_content">
           <picture>
             <source
               media="(min-width: 62.5em)"
@@ -95,7 +103,7 @@
               srcset="assets/images/ilse.tablet6.webp"
             />
         <img
-        class="ilse_image"
+        class="profile_image"
         src="assets/images/ilse.mobile6.webp"
         alt="Ilse"
         width="174"
@@ -103,31 +111,32 @@
       />
       </picture>
         <img
-              class="rings"
+              class="profile_rings"
               src="assets/images/pattern-rings.svg"
               alt=""
               width="530"
               height="129"
             />
             <img
-              class="circle"
+              class="profile_circle"
               src="assets/images/pattern-circle.svg"
               alt=""
               width="129"
               height="129"
             />
-        <div class="ilse_text"><h1 class="ilse_headline header-xl ">Nice to <br />
+        <div class="profile_text"><h1 class="profile_headline header-xl ">Nice to <br />
           meet you! I'm <span>Ilse</span>.</h1>
-        <p class="ilse_description">
+        <p class="profile_description">
           Based in Norway, I'm a full stack developer passionate about building accessible web apps and games that users love.
         </p>
-        <a href="" class="ilse_contact underline">Contact me</a>
+        <a href="" class="profile_contact underline">Contact me</a>
         </div> 
       </div>
     </div>
   </div>
     </section>
 
+  <!-- SKILLS SECTION -->
     <section class="skills">
     <h2 class="visually-hidden">Skills</h2>
     <div class="wrapper skills_wrapper bottom-border">
@@ -164,6 +173,8 @@
     width="530"
     height="129"
   />
+
+  <!-- PROJECTS SECTION -->
   </section>
   <section class="projects">
     <div class="wrapper projects_wrapper">
@@ -172,6 +183,8 @@
         <h2 class="projects_headline header-xl">Projects</h2> 
         <a href="" class="projects_contact underline">Contact me</a>
         
+
+        <!-- DESIGN PORTFOLIO -->
         <div class="projects_items">
           <picture class="projects_picture">
             <img src="assets/images/thumbnail-project-1-small.webp" alt="Project 1" class="projects_image" width="343" height="253">
@@ -181,6 +194,7 @@
         <p class="projects_skills"><span>HTML</span><span>CSS</span></p>
         <div class="projects_links"><a href="" class="underline">View Project</a><a href="" class="underline">View Code</a> </div></div>
         
+        <!-- E-LEARNING LANDING PAGE -->
         <div class="projects_items">
           <picture class="projects_picture">
             <img src="assets/images/thumbnail-project-2-small.webp" alt="Project 1" class="projects_image" width="343" height="253">
@@ -190,6 +204,7 @@
         <p class="projects_skills"><span>HTML</span><span>CSS</span></p>
         <div class="projects_links"><a href="" class="underline">View Project</a><a href="" class="underline">View Code</a></div></div>
 
+<!-- TODO WEB APP -->
           <div class="projects_items">
             <picture class="projects_picture">
             <img src="assets/images/thumbnail-project-3-small.webp" alt="Project 1" class="projects_image" width="343" height="253">
@@ -199,6 +214,7 @@
         <p class="projects_skills"><span>HTML</span><span>CSS</span><span>JavaScript</span></p>
         <div class="projects_links"><a href="" class="underline">View Project</a><a href="" class="underline">View Code</a></div></div>
 
+<!-- ENTERTAINMENT WEB APP -->
           <div class="projects_items">
             <picture class="projects_picture">
             <img src="assets/images/thumbnail-project-4-small.webp" alt="Project 1" class="projects_image" width="343" height="253">
@@ -207,7 +223,8 @@
         <h3 class="projects_title">Entertainment Web App</h3>
         <p class="projects_skills"><span>HTML</span><span>CSS</span><span>JavaScript</span></p>
         <div class="projects_links"><a href="" class="underline">View Project</a><a href="" class="underline">View Code</a></div></div>
-        
+
+<!-- MEMORY GAME-->      
           <div class="projects_items">
             <picture class="projects_picture">
             <img src="assets/images/thumbnail-project-5-small.webp" alt="Project 1" class="projects_image" width="343" height="253">
@@ -216,7 +233,8 @@
         <h3 class="projects_title">Memory Game</h3>
         <p class="projects_skills"><span>HTML</span><span>CSS</span><span>JavaScript</span></p>
         <div class="projects_links"><a href="" class="underline">View Project</a><a href="" class="underline">View Code</a></div></div>
-        
+
+<!-- ART GALLERY SHOWCASE -->
           <div class="projects_items">
             <picture class="projects_picture">
             <img src="assets/images/thumbnail-project-6-small.webp" alt="Project 1" class="projects_image" width="343" height="253">
@@ -235,6 +253,7 @@
 
     </div>
 
+<!-- CONTACT FORM SECTION -->
   </section>
   <section id="contact" class="contact bg-contact">
     <div class="wrapper contact_wrapper bottom-border">
@@ -243,50 +262,81 @@
         <h2 class="contact_title header-xl">Contact</h2>
         <p class="contact_description">I would love to hear about your project and how I could help. Please fill in the form, and I'll get back to you as soon as possible. </p>
       </div>
+      
       <form 
+      action="https://api.sheetmonkey.io/form/qSYoGEYwT6cg8MpQFV57Mn"
+      method="POST" 
+      class="contact_form"
+      onsubmit="submit"
+      >
       
-      method="POST"
-      action="https://script.google.com/macros/s/AKfycbxavTATKvvtpQ0CIAgq-L35ML3dKtph9hlJyXGTuYQCX7Pq9u42rkanuIdoUPL4fGzv/exec"
-      
-      class="contact_form">
-      <div class="contact_input">
+
+
+<div class="form_groups">
+      <div class="form_group">
         <label for="name" class="visually-hidden">Name</label>
-        <input type="text" name="name" id="name" placeholder="Name" required>
+        
+        <input 
+        type="text" 
+        class="form_input"
+        name="name" 
+        id="name" 
+        placeholder="NAME" 
+        autocomplete="name"
+        required>
+        <label for="name" class="form_label">Name</label>
+        <small class="form_small">Error message</small>
       
         
-        
-        <svg class="contact_invalid-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="12" cy="12" r="11.5" stroke="#FF6F5B"/>
-          <rect x="11" y="6" width="2" height="9" rx="1" fill="#FF6F5B"/>
-          <rect x="11" y="17" width="2" height="2" rx="1" fill="#FF6F5B"/>
-          </svg>
           
     
 
       <div>
-        <div class="contact_input">
+
+
+        <div class="form_group">
           <label for="email" class="visually-hidden">Email</label>
-          <input type="email" name="email" id="email" placeholder="Email" required>
-          <svg class="contact_invalid-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="12" cy="12" r="11.5" stroke="#FF6F5B"/>
-            <rect x="11" y="6" width="2" height="9" rx="1" fill="#FF6F5B"/>
-            <rect x="11" y="17" width="2" height="2" rx="1" fill="#FF6F5B"/>
-            </svg>
+
+          <input 
+          type="email" 
+          name="email" 
+          id="email" 
+          class="form_input"
+          placeholder="EMAIL" 
+          autocomplete="email"
+          required>
+          <label for="email" class="form_label">Email</label>
+          <small class="form_small">Error message</small>
+
   
         <div>
-          <div class="contact_input">
+          <div class="form_group">
             <label for="message" class="visually-hidden">Message</label>
-            <textarea type="text" name="message" id="message" placeholder="Message" required></textarea>
-            <svg class="contact_invalid-icon"  width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="12" cy="12" r="11.5" stroke="#FF6F5B"/>
-              <rect x="11" y="6" width="2" height="9" rx="1" fill="#FF6F5B"/>
-              <rect x="11" y="17" width="2" height="2" rx="1" fill="#FF6F5B"/>
-              </svg>
-    
+
+            <textarea 
+            type="text" 
+            name="message" 
+            id="message"
+            rows="4" 
+            class="form_input"
+            placeholder="MESSAGE" 
+            required></textarea>
+            <label for="message" class="form_label">Message</label>
+            <small class="form_small">Error message</small>
+
+
+          </div>
+
+            <input 
+            type="hidden" 
+            name="created" value="x-sheetmonkey-current-date-time" />
+    <!-- contact_form or form_group -->
           <div>
-            <div class="contact_form align-right">
-              <button type="submit">Send Message</button>
+            <div class="contact_form  align-right">
+              <button class="contact_button" type="submit">Send Message</button>
             </div>
+          </div>
+
       </form>
         <img
     class="contact_rings"
@@ -301,14 +351,31 @@
     </div>
   </section>
     </main>
+
+    <!-- FOOTER -->
     <footer class="footer bg-contact">
       <h2 class="visually-hidden">Footer</h2>
       <div class="wrapper">
         <nav class="header__nav">
           <h2 class="visually-hidden">Navigation</h2>
+          <a href="" class="header__social">
+
+          </a>
         </nav>
       </div>
     </footer>
 
   </body>
 </html>
+
+  <!-- INVALID ICON - NOT WORKING 
+<svg 
+role="img"
+class="contact_invalid-icon" width="24" 
+height="24" 
+viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="12" cy="12" r="11.5" stroke="#FF6F5B"/>
+  <rect x="11" y="6" width="2" height="9" rx="1" fill="#FF6F5B"/>
+  <rect x="11" y="17" width="2" height="2" rx="1" fill="#FF6F5B"/>
+  </svg>
+-->
