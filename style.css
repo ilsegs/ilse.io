@@ -707,7 +707,7 @@ h1 > span {
   color: var(--graytext);
 }
 
-.form_input::placeholder-shown + .form_label {
+.form_input::placeholder-shown .form_label {
   opacity: 0;
   visibility: hidden;
   transform: translateY(-4.4rem);
@@ -853,11 +853,11 @@ h1 > span {
     -webkit-transition: all 300ms ease-in-out;
   }
 
-  .form_input:focus {
+  .form_group:focus {
     outline: none;
   }
 
-  .form_input::placeholder {
+  .form_group::placeholder {
     color: #242424;
     letter-spacing: -0.22px;
   }
