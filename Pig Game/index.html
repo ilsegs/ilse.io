@@ -8,7 +8,8 @@
     <title>Pig Game</title>
   </head>
   <body>
-    <header><button class="btn btn--rules">Rules</button></header>
+    <header><button class="btn btn--rules">Rules</button>
+      <button class="btn btn--name">📝 Change Name</button></header>
     <div class="modal hidden">
       <button class="close-modal">&times;</button>
       <h1>Gameplay🐷</h1>
@@ -52,6 +53,9 @@
     </div>
     <div class="overlayname hidden"></div>
     <main class="game-container">
+      <button class="btn btn--name">📝 Change Name</button>
+      <button class="btn btn--new">🔄 New Game</button>
+    </div>
       <section class="player player--0 player--active">
         <h2 class="name" id="name--0">Player 1</h2>
         <p class="score" id="score--0">43</p>
@@ -70,11 +74,12 @@
       </section>
 
       <img src="dice-5.png" alt="Playing dice" class="dice" />
-      <button class="btn btn--name">📝 change name</button>
-      <button class="btn btn--new">🔄 New game</button>
-      <button class="btn btn--roll">🎲 Roll dice</button>
-      <button class="btn btn--hold">📥 Hold</button>
     </main>
+    <div class="buttons-bottom">
+      <button class="btn btn--roll">🎲 Roll Dice</button>
+      <button class="btn btn--hold">📥 Hold</button>
+    </div>
+
     <script src="script.js"></script>
   </body>
 </html>

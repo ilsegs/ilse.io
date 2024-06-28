@@ -608,7 +608,7 @@ h1 > span {
     height: 100%;
     background-color: black;
     opacity: 0;
-    transform: scaleX(1);
+    transform: scale(inherit);
     transform-origin: 100%;
     transition: opacity 150ms ease-in-out;
   }

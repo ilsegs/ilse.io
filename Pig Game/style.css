@@ -3,7 +3,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 html {
@@ -20,6 +20,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100vh;
+  padding: 2rem;
 }
 
 /* LAYOUT */
@@ -299,4 +301,96 @@ input[type='submit'] {
 
 input[type='submit']:hover {
   background-color: #45a049;
+}
+
+/* TABLET*/
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  main {
+    flex-direction: row;
+    height: auto;
+    max-width: none;
+    position: relative;
+  }
+
+  .player {
+    padding: 10rem;
+  }
+
+  .dice {
+    top: 20rem;
+  }
+  .btn--rules {
+    position: absolute;
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .buttons-top {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .buttons-bottom {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: auto;
+  }
+
+  .buttons-top .btn,
+  .buttons-bottom .btn {
+    margin: 0.5rem;
+    padding: 0.5rem 1.5rem;
+  }
+}
+
+/* MOBILE*/
+
+@media (max-width: 767px) {
+  main {
+    flex-direction: column;
+    height: auto;
+    max-width: none;
+    position: relative;
+  }
+
+  .player {
+    padding: 2rem;
+  }
+
+  .dice {
+    top: 30rem;
+  }
+
+  .btn--rules {
+    top: 2rem;
+    transform: translate(10rem, 50);
+  }
+
+  .btn--name {
+    top: 8rem;
+    transform: translate(10rem, 50);
+  }
+
+  .buttons-container {
+    top: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .buttons-container .btn {
+    width: auto;
+    margin: 0.5rem;
+    padding: 0.5rem 1.5rem;
+  }
 }

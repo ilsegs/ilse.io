@@ -58,6 +58,7 @@ const changeNameFunction = function () {
 
 const init = function () {
   // Starting conditions
+
   scores = [0, 0];
   currentScore = 0;
   activePlayer = 0;
@@ -143,9 +144,8 @@ btnRoll.addEventListener('click', function () {
     if (dice != 1) {
       // Add dice to current score
       currentScore += dice; // same as currentScore = currentScore + dice
-      document.getElementById(
-        `current--${activePlayer}`
-      ).textContent = currentScore;
+      document.getElementById(`current--${activePlayer}`).textContent =
+        currentScore;
     } else {
       //switch to next player
       switchPlayer(activePlayer);
